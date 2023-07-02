@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link for favicon -->
+    <link rel="shortcut icon" href="./images/video-editing.ico" type="image/x-icon">
+    <!-- link for bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- script for fontswesome for icon -->
+    <script src="https://kit.fontawesome.com/ce320d3db8.js" crossorigin="anonymous"></script>
+    <!-- title -->
+    <title>Movies App</title>
+</head>
+
+<!-- body element starts from here -->
+
+<body class="bg-secondary bg-opacity-25">
+    <!-- header elements starts from here -->
+    <header class="sticky-top mb-3">
+        <!-- for navbar having icon, link for Home page, link for favourites page and input tag for search movies-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <!-- this is for app icon having img tag -->
+                <a class="navbar-brand">
+                    <img src="https://cdn-icons-png.flaticon.com/128/6011/6011835.png" alt="logo" width="40"
+                        height="40">
+                </a>
+                <!-- this button is for when screen become less than large screen hamburger menu will appear having Home page, favourites page and input tag for search movies -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- for Home page -->
+                        <li class="nav-item">
+                            <a class="nav-link fw-bolder" aria-current="page" href="./index.html">Home</a>
+                        </li>
+
+                        <!-- for favourites page -->
+                        <li class="nav-item">
+                            <a class="nav-link fw-bolder" href="./favourites.html">Favourites</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- header element ends here -->
+
+    <!-- main element starts from here  -->
+    <main>
+        <!-- this is movie info container display all information abput movie -->
+        <div class="d-flex flex-wrap flex-row justify-content-evenly" id="movieDetail-card">
+
+            <!-- this is bootstrap card for movie information -->
+            <div class="card mb-3 position-relative shadow p-3 mb-5 bg-body-tertiary rounded" style="max-width: 540px;">
+
+                <div class="row g-0">
+                    <!-- it will display movie poster -->
+                    <div class="col">
+                        <img src="" class="img-fluid rounded-start" alt="" id="movie-poster">
+                    </div>
+                    <div class="col-8">
+                        <!-- card body -->
+                        <div class="card-body">
+                            <!-- it will display movie title -->
+                            <h5 class="card-title" id="movie-title"></h5>
+
+                            <!-- it will display movie imdb rating -->
+                            <p class="card-text">
+                                <span class="fw-bolder text-decoration-underline">Rating:</span>
+                                <span><i class="fa-solid fa-star" style="color: #e7e70d;"></i></span>
+                                <span class="fw-semibold text-body-secondary" id="movie-imdb"></span>
+                                <small class="fw-semibold text-body-secondary" id="movie-imdbVotes"></small>
+                            </p>
+
+                            <!-- it will display box office conllection -->
+                            <p class="card-text">
+                                <span class="fw-bolder text-decoration-underline">BoxOffice:</span>
+                                <span><i class="fa-solid fa-sack-dollar" style="color: #35a207;"></i></span>
+                                <span class="fw-semibold text-body-secondary" id="movie-boxOffice"></span>
+                            </p>
+
+                            <!-- it will display movie release year -->
+                            <p class="card-text">
+                                <span class="fw-bolder text-decoration-underline">Year:</span>
+                                <span class="fw-semibold text-body-secondary" id="movie-year"></span>
+                            </p>
+                            <!-- it will display movie runtime -->
+                            <p class="card-text">
+                                <span class="fw-bolder text-decoration-underline">Runtime:</span>
+                                <span class="fw-semibold text-body-secondary" id="movie-runtime"></span>
+                            </p>
+                            <!-- it will display movie genre -->
+                            <p class="card-text">
+                                <span class="fw-bolder text-decoration-underline">Genre:</span>
+                                <span class="fw-semibold text-body-secondary" id="movie-genre"></span>
+                            </p>
+                            <!-- it will display movie's director -->
+                            <p class="card-text">
+                                <span class="fw-bolder text-decoration-underline">Director:</span>
+                                <span class="fw-semibold text-body-secondary" id="movie-director"></span>
+                            </p>
+                            <!-- it will display movie's writer -->
+                            <p class="card-text">
+                                <span class="fw-bolder text-decoration-underline">Writer:</span>
+                                <span class="fw-semibold text-body-secondary" id="movie-writer"></span>
+                            </p>
+                            <!-- it will display movie's actors -->
+                            <p class="card-text">
+                                <span class="fw-bolder text-decoration-underline">Actors:</span>
+                                <span class="fw-semibold text-body-secondary" id="movie-actors"></span>
+                            </p>
+                            <!-- it will display movie's language  -->
+                            <p class="card-text">
+                                <span class="fw-bolder text-decoration-underline">Language:</span>
+                                <span class="fw-semibold text-body-secondary" id="movie-language"></span>
+                            </p>
+                            <!-- it will display movie's country -->
+                            <p class="card-text">
+                                <span class="fw-bolder text-decoration-underline">Country:</span>
+                                <span class="fw-semibold text-body-secondary" id="movie-country"></span>
+                            </p>
+                            <!-- it will display movie's awards -->
+                            <p class="card-text">
+                                <span class="fw-bolder text-decoration-underline">Awards:</span>
+                                <span class="fw-semibold text-body-secondary" id="movie-awards"></span>
+                            </p>
+                            <!-- it will display movie's plot -->
+                            <p class="card-text">
+                                <span class="fw-semibold text-body-secondary" id="movie-plot"></span>
+                            </p>
+                        </div>
+                        <!-- card body ends here -->
+                    </div>
+                </div>
+            </div>
+            <!-- bootstrap card ends here -->
+        </div>
+        <!-- movie info container ends here -->
+    </main>
+    <!-- main element ends here -->
+
+    <!-- script for bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+        </script>
+    <!-- custom js file attached for various actions -->
+    <script src="./js/movieInfo.js"></script>
+</body>
+<!-- body element ends here -->
+
+</html>
