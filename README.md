@@ -1,6 +1,6 @@
 # Movie-app
 
-https://ankit8895.github.io/Movie-app/index.html
+https://ankit8895.github.io/Movie-app/
 
 The Movies App is a user-friendly web application built using:
 
